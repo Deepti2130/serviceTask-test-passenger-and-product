@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <form #productForm="ngForm" (ngSubmit)="onAddproduct()">
+      <div class="form-group">
+      <label for="pname"><strong>Product Name</strong></label>
+      <input
+      #pname="ngModel"
+      type="text" class="form-control" id="pname"
+      name="pname"
+      ngModel
+      required>
+      <strong class="text-danger" *ngIf="pname.touched && pname.hasError('required')">Product Name is required field</strong>
+      </div>
+      <div class="form-group">
+        <label for="pdetails"><strong>Product Details</strong></label>
+        <input
+        #pdetails="ngModel"
+        type="text" class="form-control" id="pdetails"
+        name="pdetails"
+        ngModel
+        required>
+        <strong class="text-danger" *ngIf="pdetails.touched && pdetails.hasError('required')">Product Details is required field</strong>
+      </div>
+      <button mat-raised-button color="accent"><strong>Accent</strong></button>
+    </form>
+  </div>
+</div>

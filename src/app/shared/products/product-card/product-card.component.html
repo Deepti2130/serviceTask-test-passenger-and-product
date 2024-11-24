@@ -1,0 +1,17 @@
+<div class="card mb-4">
+  <div class="card-header">
+   <h3><strong>{{Productobj.pname}}</strong></h3>
+  </div>
+  <div class="card-body">
+    <p>
+      {{Productobj.pdetails}} And product status is <strong>{{Productobj.pstatus}}</strong>
+    </p>
+
+  </div>
+  <!-- to bind click event to change the productstatus -->
+  <div class="card-footer d-flex justify-content-between">
+    <button mat-raised-button color="accent" (click)="onstatusChange(productstatus.Inprogress)"><strong>Inprogress</strong></button>
+    <button mat-raised-button color="accent" (click)="onstatusChange(productstatus.Dispatched)"><strong>Dispatched</strong></button>
+    <button mat-raised-button color="accent" (click)="onstatusChange(productstatus.Delivered)"><strong>Delivered</strong></button>
+  </div>
+</div>
